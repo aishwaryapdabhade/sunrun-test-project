@@ -30,7 +30,7 @@ def display_board():
                 'route' : x['relationships']['route']['data']['id']
                 })
         
-        response['data'] = response['data'][:15] # take only first 15 lines of the data
+        response['data'] = response['data'][:10] # take only first 15 lines of the data
         response['data'] = sorted(response['data'], key=lambda x : x['departure_time'])
         
     except Exception as e:
